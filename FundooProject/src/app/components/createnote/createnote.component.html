@@ -1,0 +1,62 @@
+<div fxFlex=100 fxLayout="row" fxLayoutAlign="center center" style="margin-top: 50px;">
+    <mat-card fxLayout="row" *ngIf="!isshow" (click)="display()">
+        <input matInput placeholder="Take a note.....">
+        <div>
+            <img src="../../../assets/check_box_FILL0_wght400_GRAD0_opsz48.svg">
+            <img src="../../../assets/brush_FILL0_wght400_GRAD0_opsz48.svg">
+            <img src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg">
+
+        </div>
+    </mat-card>
+    <mat-card fxLayout="row" style="width:500px; height:300px" *ngIf="isshow" >
+        <form [formGroup]="createnoteform" (ngSubmit)="createNote()">
+            <div style="border:none ;">
+                
+                    <!-- <mat-label>Favorite food</mat-label> -->
+                    <input matInput placeholder="Title" type="text" formControlName="title">
+                
+                
+                    <img src="../../../assets/push_pin_FILL0_wght400_GRAD0_opsz48.svg" style="width:30px;height:20px;border: none;"  onclick="ispin()">
+                
+            </div>
+            <div>
+                <mat-form-field class="example-full-width" style="width:480px; height:100px;">
+                    <!-- <mat-label>Leave a comment</mat-label> -->
+                    <textarea matInput placeholder="Take a note....." formControlName="body"></textarea>
+                </mat-form-field>
+            </div>
+            <div fxLayoutgap="5px">
+                <button mat-button>
+                    <img src="../../../assets/add_alert_FILL0_wght400_GRAD0_opsz48.svg"
+                        style="width:20px ;height: 20px;" >
+                </button>
+                <button mat-button>
+                    <img src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg"
+                        style="width:20px ;height: 20px;" >
+                </button>
+                <button mat-button>
+                    <img src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg" style="width:20px ;height: 20px;" >
+                </button>
+                <button mat-button>
+                    <img src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg" style="width:20px ;height: 20px;" >
+                </button>
+                <button mat-button>
+                    <img src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" style="width:20px ;height: 20px;" >
+                </button>
+                <button mat-button>
+                    <img src="../../../assets/more_vert_FILL0_wght400_GRAD0_opsz48.svg"
+                        style="width:20px ;height: 20px;">
+                </button>
+                <button mat-button>
+                    <img src="../../../assets/undo_FILL0_wght400_GRAD0_opsz48.svg" style="width:20px ;height: 20px;">
+                </button>
+                <button mat-button>
+                    <img src="../../../assets/redo_FILL0_wght400_GRAD0_opsz48.svg" style="width:20px ;height: 20px;">
+                </button>
+            </div>
+            <div>
+                <button mat-button>Close</button>
+            </div>
+        </form>
+    </mat-card>
+</div>

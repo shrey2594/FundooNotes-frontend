@@ -1,0 +1,75 @@
+<div fxFlex=100 fxLayout="row" fxLayoutAlign="center center" style="margin-top: 50px;">
+    <mat-card fxLayout="row" style="width:700px; height:500px">
+        <div class="left" fxLayout="column">
+
+            <div fxLayout="column" fxLayoutAlign="center center">
+                <H1 style="font-size:300%;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                    <b><span style="color:blue ;font-size:100%;font-family:cursive;">F</span>
+                    <span style="color:green ;font-size:100%;font-family:cursive;">U</span>
+                    <span style="color:orange ;font-size:100%;font-family:cursive;">N</span>
+                    <span style="color:red ;font-size:100%;font-family:cursive;">D</span>
+                    <span style="color:magenta ;font-size:100%;font-family:cursive;">O</span>
+                    <span style="color:purple ;font-size:100%;font-family:cursive;">O</span>
+                </b>
+                </H1>
+                <br>
+                Create your Fundoo Account
+            </div>
+            <br>
+            <form [formGroup]="signupForm" (ngSubmit)="signup()">
+                <div fxLayoutGap="10px">
+                    <mat-form-field appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input matInput placeholder="firstName" formControlName="firstName" >
+                        <mat-error>*required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput placeholder="lastName" formControlName="lastName">
+                        <mat-error>*required</mat-error>
+
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline" style="width:410px">
+                        <mat-label>Username</mat-label>
+                        <input matInput placeholder="userName" formControlName="userName">
+                        <mat-error>*required</mat-error>
+                        <mat-hint>You can use letters,numbers & periods</mat-hint>
+                    </mat-form-field>
+                    
+                </div>
+                <br>
+                <div fxLayoutGap="10px">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="password" formControlName="password">
+                        <mat-error>*required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Confirm Password</mat-label>
+                        <input matInput placeholder="confirm Password" formControlName="confirmPassword">
+                        <mat-error>*required</mat-error>
+                        <mat-hint>Use 8 or more characters with a mixture of letters,numbers & symbols</mat-hint>
+                    </mat-form-field>
+                </div>
+                <br>
+                <div>
+                    <!-- <section class="example-section"> -->
+                        <mat-checkbox class="example-margin">Show Password</mat-checkbox>
+                        <!-- <mat-checkbox class="example-margin" [disabled]="true">Disabled</mat-checkbox> -->
+                    <!-- </section> -->
+                </div>
+                <br>
+                <div fxLayoutGap="190px">
+                    <a routerLink="/login">Sign in instead</a>
+                    <button mat-raised-button color="primary">Create Account</button>
+                </div>
+            </form>
+        </div>
+        <div class="right" style="margin-top: 50px;right: 0px;" fxLayoutAlign="center center">
+            <img src="../../../assets/g1.svg" alt="image" style="width:250px;height:300px">
+            
+        </div>
+    </mat-card>
+</div>

@@ -1,0 +1,20 @@
+<!-- <p>displaynotes works!</p> -->
+<!-- <mat-card *ngFor='let note of noteList' >
+<div>
+    <div >
+        
+    </div>
+    <div >
+        
+    </div>
+</div>
+</mat-card> -->
+<div >
+    <div *ngFor="let note of noteList">
+        <mat-card>
+            <mat-card-title>{{note.title}}</mat-card-title>
+            <mat-card-content>{{note.body}}</mat-card-content>
+        </mat-card>
+    </div>
+
+</div>
